@@ -2,6 +2,7 @@ import React from "react";
 import Reactions from "./Reactions";
 
 export default function DataContainer(props) {
+  
   return (
     <div className="nasa-photo">
       <div className="img-container">
@@ -27,7 +28,6 @@ export default function DataContainer(props) {
         <h1>{props.data.title}</h1>
         <p className="date">{props.data.date}</p>
         <p className="explanation">{props.data.explanation}</p>
-        <button>Like</button>
         <Reactions />
       </div>
     </div>
