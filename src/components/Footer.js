@@ -4,25 +4,15 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-icons">
-        <a href="https://github.com/LihaoWang">
+        <a href="https://github.com/rathore90">
           <FaGithubAlt />
         </a>
-        <a href="https://www.linkedin.com/in/lihaowang98/">
+        <a href="https://www.linkedin.com/in/deep90/">
           <FaLinkedin />
         </a>
       </div>
       <p>
-        Created by Leo Wang &copy; 2021{" "}
-        <a href="https://api.nasa.gov/">| NASA APOD API</a>
-        <br />
-        Favicon made by{" "}
-        <a href="https://www.freepik.com" title="Freepik">
-          Freepik
-        </a>{" "}
-        from{" "}
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com
-        </a>
+        Created by Pardeep Rathore &copy; 2022
       </p>
     </div>
   );

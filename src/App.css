@@ -92,3 +92,35 @@ body {
   border-radius: 5px;
   background: #e77171;
 }
+
+.reactions{
+  display: flex;
+  background: white;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.reactions img{
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.footer{
+  background: white;
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-icons{
+  margin-top: 10px;
+}
+.footer-icons svg{
+  width: 2rem;
+  height: 2rem;
+  padding: 0 20px;
+}
