@@ -25,7 +25,7 @@ export default function NasaPhoto() {
       <NavBar />
       {
         photoData.map(photodata => {
-          return <DataContainer data={ photodata } />
+          return <DataContainer data={photodata} key={ photodata.date }/>
         })
       }
       <Footer/>
