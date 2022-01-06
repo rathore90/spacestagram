@@ -8,7 +8,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route element={<Home />} path="/" />
         <Route element={ <NasaPhoto />} path="/nasaphoto" />
       </Routes>
     </BrowserRouter>
