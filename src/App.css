@@ -33,9 +33,9 @@ body {
   display: flex;
   margin: 20px auto;
   width: 75%;
-  max-height: 450px;
   border-radius: 10px;
   background: white;
+  position: relative;
   box-shadow: 21px 25px 23px -7px rgb(0 0 0 / 15%);
 }
 
@@ -47,7 +47,6 @@ body {
 }
 
 .nasa-photo h1 {
-  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -91,7 +90,13 @@ body {
   background: white;
   padding: 10px;
   width: fit-content;
-  border-radius: 10px;
+  border-radius: 5px;
+  box-shadow: 21px 25px 23px -7px rgb(0 0 0 / 15%);
+  opacity: 0;
+  transform: translateY(50px);
+  margin: 5px 0;
+  border: 1px solid #222222;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .reactions img, .reaction-action img{
@@ -128,13 +133,6 @@ body {
   width: 70%;
 }
 
-.reactions{
-  opacity: 0;
-  transform: translateY(50px);
-  margin-top: 5px;
-  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
 .reaction-action{
   width: 35px;
   height: 35px;
@@ -155,7 +153,23 @@ span.e-input-group.e-control-wrapper.e-date-range-wrapper {
   display: contents !important;
 }
 
-@media (max-width: 768px) {
+.vertical-dots{
+  width: 5px;
+  height: 5px;
+  margin-bottom: 3px;
+  background: #222222b3;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 15px;
+}
+
+.vertical-dots-container {
+  height: auto;
+  margin: 20px 25px 0 0;
+  cursor: pointer;
+}
+
+@media (max-width: 1025px) {
   .nasa-photo {
     display: block;
     width: 95%;
@@ -186,6 +200,7 @@ span.e-input-group.e-control-wrapper.e-date-range-wrapper {
 
   .nasa-photo h1 {
     font-size: 24px;
+    margin-top: 0;
   }
 
   .reactions img {
@@ -203,6 +218,16 @@ span.e-input-group.e-control-wrapper.e-date-range-wrapper {
   }
   span.e-input-group.e-control-wrapper.e-date-range-wrapper {
     width: 80%;
+  }
+
+  .vertical-dots-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .vertical-dots {
+    background: #fafafa;
   }
 
 }

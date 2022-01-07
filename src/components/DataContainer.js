@@ -5,7 +5,7 @@ export default function DataContainer(props) {
   localStorage.setItem('src', 'like');
 
   let explanation = props.data.explanation;
-  let length = 500;
+  let length = 300;
   let trimmedexplanation = explanation.substring(0, length) + ' ........';
 
   return (
@@ -34,6 +34,11 @@ export default function DataContainer(props) {
         <p className="date">{props.data.date}</p>
         <p className="explanation">{trimmedexplanation}</p>
         <Reactions src={localStorage.getItem('src')}/>
+      </div>
+      <div className="vertical-dots-container">
+        <div className="vertical-dots"></div>
+        <div className="vertical-dots"></div>
+        <div className="vertical-dots"></div>
       </div>
     </div>
   );
