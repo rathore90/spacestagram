@@ -8,6 +8,10 @@ export default function DataContainer(props) {
   let length = 300;
   let trimmedexplanation = explanation.substring(0, length) + ' ........';
 
+  function share_post(event){
+    console.log(event);
+  }
+
   return (
     <div className="nasa-photo">
       <div className="img-container">
@@ -35,7 +39,7 @@ export default function DataContainer(props) {
         <p className="explanation">{trimmedexplanation}</p>
         <Reactions src={localStorage.getItem('src')}/>
       </div>
-      <div className="vertical-dots-container">
+      <div onClick={share_post} className="vertical-dots-container">
         <div className="vertical-dots"></div>
         <div className="vertical-dots"></div>
         <div className="vertical-dots"></div>

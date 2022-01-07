@@ -9,7 +9,7 @@ import { ClimbingBoxLoader } from "react-spinners";
 
 export default function NasaPhoto() {
   const [photoData, setPhotoData] = useState(null);
-  const [query, setQuery] = useState(['2022-01-02', '2022-01-06']);
+  const [query, setQuery] = useState(['2022-01-01', '2022-01-06']);
   const [loading, setLoading] = useState(false);
 
   const onChange = (props) => {
@@ -41,7 +41,9 @@ export default function NasaPhoto() {
       );
       const data = await res.json();
       setPhotoData(data);
-      setLoading(false);
+      setTimeout(function(){
+        setLoading(false);
+      }, 3000);
     }
   }, [query]);
 
