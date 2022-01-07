@@ -38,6 +38,8 @@ body {
 .nasa-photo img {
   width: 100%;
   max-height: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .nasa-photo h1 {
@@ -52,6 +54,7 @@ body {
 
 .nasa-photo .explanation {
   color: #222222b3;
+  overflow-wrap: break-word;
 }
 
 .home {
@@ -86,7 +89,7 @@ body {
   border-radius: 10px;
 }
 
-.reactions img{
+.reactions img, .reaction-action img{
   width: 35px;
   height: 35px;
   margin: 0 10px;
@@ -123,23 +126,31 @@ body {
 .reactions{
   opacity: 0;
   transform: translateY(50px);
+  margin-top: 5px;
   transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .reaction-action{
   width: 35px;
+  height: 35px;
   cursor: pointer;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   .nasa-photo {
     display: block;
+    padding: 10px 40px;
   }
 
   .nasa-photo img {
     width: 100%;
     margin-right: 0;
     margin-bottom: 30px;
+  }
+
+    .reactions img {
+      width: 100%;
+      margin: 0 10px;
   }
 
   .img-container{

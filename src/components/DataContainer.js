@@ -2,7 +2,7 @@ import React from "react";
 import Reactions from "./Reactions";
 
 export default function DataContainer(props) {
-  
+  localStorage.setItem('src', 'like');
   return (
     <div className="nasa-photo">
       <div className="img-container">
@@ -28,7 +28,7 @@ export default function DataContainer(props) {
         <h1>{props.data.title}</h1>
         <p className="date">{props.data.date}</p>
         <p className="explanation">{props.data.explanation}</p>
-        <Reactions />
+        <Reactions src={localStorage.getItem('src')}/>
       </div>
     </div>
   );
