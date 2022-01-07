@@ -3,6 +3,11 @@ import Reactions from "./Reactions";
 
 export default function DataContainer(props) {
   localStorage.setItem('src', 'like');
+
+  let explanation = props.data.explanation;
+  let length = 500;
+  let trimmedexplanation = explanation.substring(0, length) + ' ........';
+
   return (
     <div className="nasa-photo">
       <div className="img-container">
@@ -27,7 +32,7 @@ export default function DataContainer(props) {
       <div className="data-container">
         <h1>{props.data.title}</h1>
         <p className="date">{props.data.date}</p>
-        <p className="explanation">{props.data.explanation}</p>
+        <p className="explanation">{trimmedexplanation}</p>
         <Reactions src={localStorage.getItem('src')}/>
       </div>
     </div>
