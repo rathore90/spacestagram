@@ -147,9 +147,12 @@ body {
 }
 
 span.e-input-group.e-control-wrapper.e-date-range-wrapper {
-  width: 50%;
+  width: 350px;
   margin: 0 auto;
   display: flex;
+}
+.css-fpqs8j{
+  display: contents !important;
 }
 
 @media (max-width: 768px) {
