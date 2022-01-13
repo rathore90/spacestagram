@@ -1,5 +1,6 @@
 import React from "react";
 import Reactions from "./Reactions";
+import { FacebookShareButton, FacebookIcon } from "react-share";
 
 export default function DataContainer(props) {
   localStorage.setItem('src', 'like');
@@ -9,7 +10,14 @@ export default function DataContainer(props) {
   let trimmedexplanation = explanation.substring(0, length) + ' ........';
 
   function share_post(event){
-    console.log(event);
+    event.preventDefault();
+    let element = event.currentTarget.children[1];
+    element.style.transition = 'max-height 1s ease-in';
+    if (element.style.maxHeight === '500px'){
+      element.style.maxHeight = '0px';
+    }else{
+      element.style.maxHeight = '500px';
+    }
   }
 
   return (
@@ -39,10 +47,22 @@ export default function DataContainer(props) {
         <p className="explanation">{trimmedexplanation}</p>
         <Reactions src={localStorage.getItem('src')}/>
       </div>
-      <div onClick={share_post} className="vertical-dots-container">
-        <div className="vertical-dots"></div>
-        <div className="vertical-dots"></div>
-        <div className="vertical-dots"></div>
+      <div onClick={share_post} id="menu">
+        <div className="vertical-dots-container">
+          <div className="vertical-dots"></div>
+          <div className="vertical-dots"></div>
+          <div className="vertical-dots"></div>
+        </div>
+        <ul id="list">
+          <li>
+            <FacebookShareButton
+              url={"https://deepspacestagram.netlify.app/"}
+              quote={"Pardeep Rathore - Space is yours to explore"}
+              hashtag="#deepspacestagram">
+              <FacebookIcon size={36} />
+            </FacebookShareButton>
+          </li>
+        </ul>
       </div>
     </div>
   );

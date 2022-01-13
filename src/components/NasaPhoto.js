@@ -36,14 +36,25 @@ export default function NasaPhoto() {
     setLoading(true);
     fetchPhoto();
     async function fetchPhoto() {
-      const res = await fetch(
+      await fetch(
         `https://api.nasa.gov/planetary/apod?start_date=${query[0]}&end_date=${query[1]}&api_key=k2XWlRUP28NUg4Zhwt8jbgiqKbI8Mdfb6Shni0Gf`
-      );
-      const data = await res.json();
-      setPhotoData(data);
-      setTimeout(function(){
-        setLoading(false);
-      }, 3000);
+      ).then(
+        function (response) {
+          if (response.status !== 200) {
+            console.log('Status Code: ' + response.status);
+            return;
+          }
+          response.json().then(function (data) {
+            setPhotoData(data);
+            setTimeout(function(){
+              setLoading(false);
+            }, 3000);
+          });
+        }
+      )
+      .catch(function (err) {
+        console.log('Fetch Error :-S', err);
+      });
     }
   }, [query]);
 
@@ -52,7 +63,7 @@ export default function NasaPhoto() {
   return (
     <>
       { loading ? 
-        (<ClimbingBoxLoader size={30} color={"#d14f4f"} loading={loading}/>) : 
+        (<div className="loader"><ClimbingBoxLoader size={30} color={"#d14f4f"} loading={loading} /></div>) :
         (<>
           <NavBar />
           <div className="datepicker-wrapper">
@@ -68,10 +79,7 @@ export default function NasaPhoto() {
           <Footer />
         </>
         )
-}
-
-
-
+      }
     </>
   );
 }

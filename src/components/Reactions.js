@@ -1,4 +1,5 @@
 import React from "react";
+import { FacebookShareButton, FacebookIcon } from "react-share";
 
 export default function Reactions() {
   function pickReaction(event){
@@ -29,7 +30,15 @@ export default function Reactions() {
 
   return (
     <>
-    <div className="reaction-action" onClick={reactionContainer}><img src={'reactions/like.png'} alt="Like Reaction"/></div>
+    <div className="reaction-action" onClick={reactionContainer}>
+      <img src={'reactions/like.png'} alt="Like Reaction"/>
+      <FacebookShareButton
+        url={"https://deepspacestagram.netlify.app/"}
+        quote={"Pardeep Rathore - Space is yours to explore"}
+        hashtag="#deepspacestagram">
+        <FacebookIcon size={36} />
+      </FacebookShareButton>
+    </div>
     <div className="reactions">
       { allReactions }
     </div>

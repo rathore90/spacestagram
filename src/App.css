@@ -133,9 +133,13 @@ body {
 }
 
 .reaction-action{
-  width: 35px;
   height: 35px;
+  display: flex;
   cursor: pointer;
+}
+
+.reaction-action svg{
+  border-radius: 50%;
 }
 
 .datepicker-wrapper{
@@ -168,6 +172,20 @@ span.e-input-group.e-control-wrapper.e-date-range-wrapper {
   cursor: pointer;
 }
 
+/*  */
+#menu #list {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    overflow: hidden;
+    position: absolute;
+    right: 1%;
+    list-style: none;
+}
+
+#menu svg{
+  border-radius: 50%;
+}
+
 @media (max-width: 1025px) {
   .nasa-photo {
     display: block;
@@ -187,6 +205,9 @@ span.e-input-group.e-control-wrapper.e-date-range-wrapper {
   .reactions img, .reaction-action img {
     width: 35px;
     height: 35px;
+  }
+  .reaction-action{
+    justify-content: space-between;
   }
 
   .nasa-photo .date {
@@ -223,6 +244,11 @@ span.e-input-group.e-control-wrapper.e-date-range-wrapper {
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  #menu #list {
+    top: 5%;
+    right: 5%;
   }
 
   .vertical-dots {
