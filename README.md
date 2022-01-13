@@ -9,9 +9,14 @@
 
 ## Features
 
-- Date Filter with Date Range or with Single Date
+- Date Filter with a date range or with a single date
+
+![Screen Shot 2022-01-13 at 2 14 18 PM](https://user-images.githubusercontent.com/39980537/149417554-4f3d58fe-e755-4aee-a9c3-dfafdda510aa.png)
+
 - Like Post - User can give reactions to a post
+
 ![Screen Shot 2022-01-13 at 2 10 47 PM](https://user-images.githubusercontent.com/39980537/149417071-2751422e-63c6-48f6-b292-c262ebaaee9d.png)
+
 - Facebook Share
 
 -----------------
