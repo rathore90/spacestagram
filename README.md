@@ -9,17 +9,17 @@
 
 ## Features
 
-- Date Filter with a date range or with a single date
+- _Date Filter with a date range or with a single date_
 
 ![Screen Shot 2022-01-13 at 2 14 18 PM](https://user-images.githubusercontent.com/39980537/149417554-4f3d58fe-e755-4aee-a9c3-dfafdda510aa.png)
 
-- Like Post - User can give reactions to a post
+- _Like Post - User can give reactions to a post_
 
 ![Screen Shot 2022-01-13 at 2 10 47 PM](https://user-images.githubusercontent.com/39980537/149417071-2751422e-63c6-48f6-b292-c262ebaaee9d.png)
 
-- Facebook Share
+- _Facebook Share_
 
-- Local Storage for saving the like/reaction state - WIP
+- _Local Storage for saving the like/reaction state_ - **WIP**
 
 -----------------
 
