@@ -19,6 +19,8 @@
 
 - Facebook Share
 
+- Local Storage for saving the like/reaction state - WIP
+
 -----------------
 
 ## Desktop Preview
